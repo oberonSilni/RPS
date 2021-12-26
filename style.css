@@ -1,0 +1,39 @@
+*{
+    padding:0;
+    margin:0;
+    background-color: black;
+    color:white;
+}
+
+.container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap:5rem;
+   
+}
+
+.upper{
+    height:50vh;
+
+}
+
+.title{
+    font-size: 65px;
+}
+
+.dugmad{
+    display:flex;
+    gap:5rem;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.dugme{
+    width:18rem;
+    height:10rem;
+    font-size: 60px;
+}

@@ -4,102 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-let computerSelection;
-let playerSelection;
 
-let playerRes = 0;
-let computerRes = 0;
-
-
-/* FUNKCIJA KOJA GENERISHE POTEZ RACUNARA */
-
-function computerPlay (){
-randomNumber = Math.floor(Math.random() * 3);
-
-if(randomNumber === 0){
-return "ROCK"
-}
-
-else if (randomNumber === 1){
-return "PAPER"
-}
-
-else {
-return "SCISSORS"
-}
-
-}
-
-
-/*Korisnichki input + JEDNA RUNDA */
-
-function playRound () {
-    
-    
-    computerSelection = computerPlay();
-    playerSelection = window.prompt("It's your turn!").toUpperCase();
-
-if (playerSelection === "ROCK"){
-
-if (computerSelection === "ROCK"){return "DRAW"}
-else if (computerSelection === "PAPER"){computerRes++; return "YOU LOSE";}
-else if (computerSelection === "SCISSORS"){playerRes++; return "YOU WIN"; }
-    }
+<div class="container">
+<div class="upper">
+  <h1 class="title">Rock Paper Scissors 9000</h1>
+  <h3>...Choose carefully!</h3>
+  <h2 class="result"></h2>
+</div>
 
 
 
-else if (playerSelection === "PAPER"){
-
-if (computerSelection === "PAPER"){return "DRAW"}
-else if (computerSelection === "SCISSORS"){computerRes++; return "YOU LOSE";}
-else if (computerSelection === "ROCK"){playerRes++; return "YOU WIN";}
-    }
-
-
-
-else if (playerSelection === "SCISSORS"){
-
-if (computerSelection === "SCISSORS"){return "DRAW"}
-else if (computerSelection === "ROCK"){computerRes++; return "YOU LOSE"; }
-else if (computerSelection === "PAPER"){playerRes++; return "YOU WIN"; }
-    }
-
-
-
-
-
-}
-
-
-
-/* Napravi funkciju koja ce da broji rezultat i odigra 5 partija  */
-
-
-function game () {
-let x=0;
-computerRes=0;
-playerRes=0;
-
-while (x<=5){
-    x++
-    playRound()
-}
-
-if (playerRes > computerRes){
-    return "YOU WIN"
-}
-
-else if(computerRes > playerRes){
-    return "YOU LOSE"
-}
-
-else{return "DRAW"}
-
-}
-//cooment
-    </script>
+<div class="dugmad">
+  <button class="dugme" id="rock">ROCK</button>
+  <button class="dugme" id="paper">PAPER</button>
+  <button class="dugme" id="scissors">SCISSORS</button>
+</div>   
+</div>
+<script src="script.js"></script>
 </body>
 </html>
