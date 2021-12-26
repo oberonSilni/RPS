@@ -62,11 +62,19 @@
     
     result.textContent = 'Current result is: Player ' + playerRes + '  Computer ' + computerRes ;
     
-    
+
     }
     
     
-    
+    function declareWin(){
+        if(playerRes >= 5){
+            result.textContent = 'YOU WON';
+        }
+        else if(computerRes >= 5){
+            result.textContent = 'YOU LOSE';
+        }
+        else{}
+    }
     
     
     
@@ -83,6 +91,7 @@
         playerSelection = "ROCK";
         playRound ();
         result.textContent = 'Current result is: Player ' + playerRes + '  Computer ' + computerRes;
+        declareWin()
     };
 
     paperB.onclick = function(){
@@ -90,6 +99,7 @@
         playerSelection = "PAPER";
         playRound ();
         result.textContent = 'Current result is: Player ' + playerRes + '  Computer ' + computerRes;
+        declareWin()
     };
 
     scissorsB.onclick = function(){
@@ -97,4 +107,5 @@
         playerSelection = "SCISSORS";
         playRound ();
         result.textContent = 'Current result is: Player ' + playerRes + '  Computer ' + computerRes;
+        declareWin()
     };
